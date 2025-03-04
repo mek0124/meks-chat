@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
     --bg2: #0b347a;
     --bdr: #062862;
     --hvr: #124395;
-    --fg: #f5f5f5;
+    --fg:rgb(77, 74, 74);
   }
 
   body {
