@@ -8,12 +8,7 @@ require('dotenv').config();
 // import routes
 
 // connect to mongodb
-mongoose.connect(
-  process.env.MONGOOSE_CONNECTION_STRING, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-);
+mongoose.connect(process.env.MONGOOSE_CONNECTION_STRING);
 mongoose.connection.on(
   'error', 
   console.error.bind(
@@ -22,7 +17,7 @@ mongoose.connection.on(
   )
 );
 mongoose.connection.once('open', () => {
-  console.log('Connected to relative database');
+  console.log('Connected to mongodb cluster');
 });
 mongoose.Promise = global.Promise;
 
