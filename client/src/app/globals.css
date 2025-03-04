@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Ink Free";
-  src: url('../fonts/Ink-Free-Font/Inkfree.ttf');
+  src: url('../../public/fonts/Ink-Free-Font/Inkfree.ttf');
 }
 
 :root {
