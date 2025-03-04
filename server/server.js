@@ -1,5 +1,5 @@
 const http = require('http');
-const app = require('../../../../../Redo/meks-hub/app');
+const app = require('./app');
 
 require('dotenv').config();
 
@@ -24,6 +24,6 @@ server.listen(port, host, () => {
   console.log("~ Repo: " + appRepo);
   console.log("~ License: " + appLicense);
   console.log("~".repeat(80));
-  console.log(`Server is running at http://${host}:${port}`);
+  console.log(`Server is running at http://localhost:${port}`);
   console.log("~".repeat(80));
 });
