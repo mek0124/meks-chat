@@ -4,6 +4,7 @@ import {
 
 import { useAuth } from '../hooks/authContext';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import api from '../hooks/api';
 
@@ -11,6 +12,7 @@ export default function Home() {
   const [user, setUser] = useState(null);
 
   const userExistingId = useAuth();
+  const navigate = useNavigate('');
 
   useEffect(() => {
     async function getData() {
@@ -30,11 +32,11 @@ export default function Home() {
 
   if (!user) {
     return (
-      <HomeContainer className="">No User Exists</HomeContainer>
+      <HomeContainer>
+        Some welcome stuff here
+      </HomeContainer>
     );
   };
 
-  return (
-    <HomeContainer className="">Home Screen</HomeContainer>
-  );
+  return navigate('/dashboard');
 };
