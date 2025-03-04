@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "main": "/public/electron.js",
+  "main": "./public/electron.js",
   "home": "/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
@@ -52,6 +52,7 @@
   },
   "devDependencies": {
     "electron": "^34.3.0",
-    "electron-builder": "^25.1.8"
+    "electron-builder": "^25.1.8",
+    "electron-squirrel-startup": "^1.0.1"
   }
 }
