@@ -9,6 +9,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "desktop": "npm run build && npm run electron:serve",
     "electron:serve": "concurrently -k \"cross-env BROWSER=none npm start\" \"npm run electron:start\"",
     "electron:build": "",
     "electron:start": "wait-on tcp:3000 && electron ."
@@ -18,12 +19,9 @@
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "axios": "^1.8.1",
-    "concurrently": "^9.1.2",
-    "cross-env": "^7.0.3",
     "next": "15.2.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "wait-on": "^8.0.2"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -31,9 +29,6 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "electron": "^35.0.0",
-    "electron-builder": "^25.1.8",
-    "electron-squirrel-startup": "^1.0.1",
     "eslint": "^9",
     "eslint-config-next": "15.2.1",
     "tailwindcss": "^4",
